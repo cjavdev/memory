@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card.js';
+import Card from './Card.jsx';
 import './Board.css';
 
 class Board extends React.Component {
@@ -74,7 +74,7 @@ class Board extends React.Component {
     console.log(this.state.firstCard);
     return (
       this.state.deck.map((f, i) => {
-        return (<div className="Board">
+        return (<div className="Board" key={i}>
           <Card
             flip={() => {this.flip(i)}}
             content={f.content}
